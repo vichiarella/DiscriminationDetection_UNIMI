@@ -1,0 +1,8 @@
+**/node_modules
+**/.env
+**/annotations_back
+JobDescriptionCollector_Unimi.domains.json
+JobDescriptionCollector_Unimi.roles.json
+JobDescriptionCollector_Unimi.texts.json
+JobDescriptionCollector_Unimi.backgrounds.json
+JobDescriptionCollector_Unimi.labels.json
