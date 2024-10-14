@@ -40,7 +40,7 @@ const corsOptions = {
 // Use CORS middleware with options
 app.use(cors(corsOptions));
 
-app.use(limiter)
+// app.use(limiter)
 
 app.use(express.json());
 
