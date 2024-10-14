@@ -55,10 +55,10 @@ app.use('/api/labels', labelprovider)
 app.use('/api/configurations', configuration)
 // Your routes and middleware here
 
-// app.use(express.static(path.resolve(__dirname, '../../annotations_front/dd_llm/build')));
-// app.get('*', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, '../../annotations_front/dd_llm/build', 'index.html'));
-// });
+app.use(express.static(path.resolve(__dirname, '../../annotations_front/dd_llm/build')));
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../../annotations_front/dd_llm/build', 'index.html'));
+});
 
 
 
