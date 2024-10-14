@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const rateLimit = require('express-rate-limit')
+// const rateLimit = require('express-rate-limit')
 const path = require('path')
 
 const jobPosts = require('./routes/jobpost');
@@ -14,13 +14,13 @@ const labelprovider = require('./routes/label');
 const configuration = require('./routes/configuration');
 
 
-const limiter = rateLimit.rateLimit({
-	windowMs: 15 * 60 * 1000, // 15 minutes
-	limit: 1000, // Limit each IP to 100 requests per `window` (here, per 15 minutes).
-	standardHeaders: 'draft-7', // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
-	legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
-	// store: ... , // Redis, Memcached, etc. See below.
-})
+// const limiter = rateLimit.rateLimit({
+// 	windowMs: 15 * 60 * 1000, // 15 minutes
+// 	limit: 1000, // Limit each IP to 100 requests per `window` (here, per 15 minutes).
+// 	standardHeaders: 'draft-7', // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
+// 	legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
+// 	// store: ... , // Redis, Memcached, etc. See below.
+// })
 
 
 
@@ -40,7 +40,7 @@ const corsOptions = {
 // Use CORS middleware with options
 app.use(cors(corsOptions));
 
-app.use(limiter)
+// app.use(limiter)
 
 app.use(express.json());
 
