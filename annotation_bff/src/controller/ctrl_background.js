@@ -1,4 +1,4 @@
-const Background = require('../model/BackGround');
+const Background = require('../model/Background');
 
 exports.createBackground = async (req, res) => {
     const { background } = req.body;
